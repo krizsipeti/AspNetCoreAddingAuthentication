@@ -64,7 +64,7 @@ namespace WishListTests
             rgx = new Regex(pattern);
             Assert.True(rgx.IsMatch(file), @"`Home\Index.cshtml` did not contain a link to the `Account.Logout` action when the user was logged in.");
 
-            pattern = @"<a\s*asp-action\s*?=\s*?""Login""\s*asp-controller\s*?=\s*?""Account""\s*?>\s*?Log in\s*?</\s*?a\s*?>";
+            pattern = @"<a\s*asp-action\s*?=\s*?""Login""\s*asp-controller\s*?=\s*?""Account""\s*?>\s*?Login\s*?</\s*?a\s*?>";
             rgx = new Regex(pattern);
             Assert.True(rgx.IsMatch(file), @"`Home\Index.cshtml` did not contain a link to the `Account.Login` action when the user was not logged in.");
 
